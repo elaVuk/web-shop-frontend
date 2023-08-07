@@ -1,0 +1,78 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 10.99,
+      "category": "Category 1 ",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 19.99,
+      "category": "Category 2",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "price": 5.49,
+      "category": "Category 3",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "price": 7.79,
+      "category": "Category 4",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "price": 7.79,
+      "category": "Category 4",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+
+
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "price": 8.79,
+      "category": "Category 5",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+
+
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "price": 7.79,
+      "category": "Category 6",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+
+
+    },
+    {
+      "id": 7,
+      "name": "Product 7",
+      "price": 15.79,
+      "category": "Category 7",
+      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
+      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+    }
+  ]
+}
+

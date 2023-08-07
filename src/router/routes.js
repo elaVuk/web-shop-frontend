@@ -1,10 +1,13 @@
+import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
   {
-    path: '/',
+    path: '',
+    redirect: '/home',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      {path: 'home', component: () => import('pages/StartPage.vue')},
+      {path: 'category', component: () => import('pages/CategoryPage.vue')},
     ]
   },
 
@@ -16,4 +19,8 @@ const routes = [
   }
 ]
 
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
 export default routes
