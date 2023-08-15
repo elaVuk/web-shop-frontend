@@ -1,1 +1,118 @@
-// app global css in SCSS form
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@500&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $text-black;
+}
+
+.product-button {
+  font-weight: 600;
+}
+
+.price {
+  color: $text-purple;
+  font-weight: 600;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.slider-btn {
+  color:$text-white;
+  background: $text-purple;
+}
+
+.txt-head {
+  color: $text-purple;
+}
+
+.bg-head {
+  background-color: $background-color-header;
+}
+
+.bg-foo {
+  background-color: $background-color-header;
+  color: $text-purple;
+}
+
+.bg-badge {
+  background-color: $background-color-badge;
+}
+
+.icon-flower {
+  color: $text-purple;
+
+}
+.bg-purple-btn{
+  background-color: #6c3483;
+  color: $text-white;
+}
+.font-purple{
+  color: #6c3483;
+}
+.q-item,
+.text-h6 {
+  line-height: 1.12rem;
+}
+
+.q-tab__label {
+  font-weight: 600;
+}
+.header-icons{
+  font-size: 30px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../assets/orchidLogin.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.form-background{
+  background-color: white;
+  max-width: 500px;
+  width: 80%;
+  border-radius: 5%;
+}
+.q-field__label{
+  font-size: 13px;
+}
+.q-btn{
+  line-height: 1.1rem;
+}
+.first-equal-column{
+  background: rgba(108, 52, 131, 0.3);
+  border-radius: 50%;
+}
+.info-icon{
+  //background:$bg-yellow;
+  color: $bg-yellow;
+
+}
+.bg-product-dp{
+  background: rgba(108, 52, 131, 0.1);
+}
+.fs-30{
+  font-size: 25px;
+}
+.my-card:hover{
+  background-color: rgba(108, 52, 131, 0.1)!important;
+
+}
+
+@media(max-width: 768px) {
+  .q-hide-sm {
+    display: none;
+  }
+  .equal-columns{
+    display: flex;
+    flex-direction: column;
+  }
+}

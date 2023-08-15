@@ -2,77 +2,136 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1",
+      "name": "Spathiphyllum Peace Lily - Elegant Indoor Plant",
       "price": 10.99,
-      "category": "Category 1 ",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+      "category": "Indoor plants",
+      "delivery": "1 - 2 work days",
+      "description": "Elevate your living space with the beauty of the Spathiphyllum Peace Lily. Known for its graceful white blooms and lush green foliage, this elegant indoor plant adds a touch of tranquility to any room. With its air-purifying qualities, the Peace Lily not only enhances your decor but also promotes a healthier environment. Bring a sense of serenity and style to your home with the Spathiphyllum Peace Lily.",
+      "image": [
+        "../src/assets/Spatifilium.jpg",
+        "../src/assets/spatifilum2.jpg",
+        "../src/assets/spatifilium3.png",
+        "../src/assets/Spatifilium.jpg"
+      ]
     },
     {
       "id": 2,
-      "name": "Product 2",
+      "name": "Captivating Orchid: Nature's Delicate Charm",
       "price": 19.99,
-      "category": "Category 2",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
-
+      "category": "Indoor Plants",
+      "delivery": "1 - 2 work days",
+      "description": "Introducing our \"Captivating Orchid,\" a true marvel of nature's artistry. This enchanting flower carries an air of elegance that effortlessly graces any setting. With its intricate petals and soft color palette, the orchid invites you to experience the delicate charm of the natural world.\n\nSymbolizing grace and allure, the Captivating Orchid adds a touch of sophistication to your surroundings. Whether placed on a windowsill, office desk, or gifted to a loved one, its beauty shines through, captivating all who behold it. Allow this exquisite flower to infuse your space with its subtle yet undeniable allure.",
+      "image": [
+        "../src/assets/orchid.jpg",
+        "../src/assets/orchid2.jpg",
+        "../src/assets/orchid3.png"
+      ]
     },
     {
       "id": 3,
-      "name": "Product 3",
+      "name": "Pure Elegance: The Enchanting White Orchid",
       "price": 5.49,
-      "category": "Category 3",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
-
+      "category": "Indoor Plants",
+      "delivery": "1 - 2 work days",
+      "description": "Introducing the White Orchid Elegance: a delicate masterpiece of nature's allure. With its pristine petals and graceful presence, the White Orchid brings an air of sophistication to any environment. Its timeless beauty captivates the senses, evoking a sense of tranquility and serenity. Embrace the charm of this ethereal flower as it enchants your space with its purity and elegance. Whether adorning your living space or gracing a special occasion, the White Orchid is a symbol of refined beauty that will continue to inspire and captivate.",
+      "image": [
+        "../src/assets/whiteO.jpg",
+        "../src/assets/whiteO2.jpg",
+        "../src/assets/whiteO3.png"
+      ]
     },
     {
       "id": 4,
-      "name": "Product 4",
-      "price": 7.79,
-      "category": "Category 4",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
-
+      "name": "Pure Elegance: The Enchanting White Orchid",
+      "price": 5.49,
+      "category": "Indoor Plants",
+      "delivery": "1 - 2 work days",
+      "description": "Introducing the White Orchid Elegance: a delicate masterpiece of nature's allure. With its pristine petals and graceful presence, the White Orchid brings an air of sophistication to any environment. Its timeless beauty captivates the senses, evoking a sense of tranquility and serenity. Embrace the charm of this ethereal flower as it enchants your space with its purity and elegance. Whether adorning your living space or gracing a special occasion, the White Orchid is a symbol of refined beauty that will continue to inspire and captivate.",
+      "image": [
+        "../src/assets/whiteO.jpg",
+        "../src/assets/whiteO2.jpg",
+        "../src/assets/whiteO3.png"
+      ]
+    }
+  ],
+  "slide": [
+    {
+      "id": 1,
+      "image": "../src/assets/slider5.jpg",
+      "headlinetext": "true marvel of nature's artistry",
+      "slidertext": "This enchanting flower carries an air of elegance that effortlessly graces any setting",
+      "pageUrl": ""
+    },
+    {
+      "id": 2,
+      "image": "../src/assets/slider4.jpg",
+      "headlinetext": "true marvel of nature's artistry",
+      "slidertext": "This enchanting flower carries an air of elegance that effortlessly graces any setting",
+      "pageUrl": ""
+    }
+  ],
+  "bestseller": [
+    {
+      "id": 1,
+      "name": "Pure Elegance: The Enchanting White Orchid",
+      "price": 5.49,
+      "category": "Indoor Plants",
+      "description": "Introducing the White Orchid Elegance: a delicate masterpiece of nature's allure. With its pristine petals and graceful presence, the White Orchid brings an air of sophistication to any environment. Its timeless beauty captivates the senses, evoking a sense of tranquility and serenity. Embrace the charm of this ethereal flower as it enchants your space with its purity and elegance. Whether adorning your living space or gracing a special occasion, the White Orchid is a symbol of refined beauty that will continue to inspire and captivate.",
+      "image": "../src/assets/flower1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Pure Elegance: The Enchanting White Orchid",
+      "price": 5.49,
+      "category": "Indoor Plants",
+      "description": "Embrace the charm of this ethereal flower as it enchants your space with its purity and elegance. Whether adorning your living space or gracing a special occasion, the White Orchid is a symbol of refined beauty that will continue to inspire and captivate.",
+      "image": "../src/assets/flower2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pure Elegance: The Enchanting White Orchid",
+      "price": 5.49,
+      "category": "Indoor Plants",
+      "description": " Whether adorning your living space or gracing a special occasion, the White Orchid is a symbol of refined beauty that will continue to inspire and captivate.",
+      "image": "../src/assets/flower3.jpg"
     },
     {
       "id": 4,
-      "name": "Product 4",
-      "price": 7.79,
-      "category": "Category 4",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
-
-
+      "name": "Pure Elegance: The Enchanting White Orchid",
+      "price": 5.49,
+      "category": "Indoor Plants",
+      "description": "Introducing the White Orchid Elegance: a delicate masterpiece of nature's allure. With its pristine petals and graceful presence, the White Orchid brings an air of sophistication to any environment. Its timeless beauty captivates the senses, evoking a sense of tranquility and serenity. Embrace the charm of this ethereal flower as it enchants your space with its purity and elegance. Whether adorning your living space or gracing a special occasion, the White Orchid is a symbol of refined beauty that will continue to inspire and captivate.",
+      "image": "../src/assets/flower4.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Ela Vu",
+      "username": "elavu",
+      "email": "ela@example.com",
+      "password": "password123"
     },
     {
-      "id": 5,
-      "name": "Product 5",
-      "price": 8.79,
-      "category": "Category 5",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
-
-
+      "id": 2,
+      "name": "Person Who",
+      "username": "perwho",
+      "email": "perwho@example.com",
+      "password": "password123"
     },
     {
-      "id": 6,
-      "name": "Product 6",
-      "price": 7.79,
-      "category": "Category 6",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
-
-
+      "id": 3,
+      "name": "test test",
+      "username": "testete",
+      "email": "test@test.com",
+      "password": "123test"
     },
     {
-      "id": 7,
-      "name": "Product 7",
-      "price": 15.79,
-      "category": "Category 7",
-      "description": "Discover the beauty of our exquisite Flower Collection. Each bloom is a masterpiece of nature, delicately hand-picked to bring joy to your life. Brighten any space with vibrant colors and captivating fragrances. Elevate your moments with the elegance and grace of our handcrafted floral arrangements. Explore our Flower Collection and let nature's artistry inspire your soul.",
-      "image": "https://cdn.quasar.dev/img/mountains.jpg"
+      "id": 4,
+      "name": "flo flo",
+      "username": "flofloflo",
+      "email": "flo@example.com",
+      "password": "flo123"
     }
   ]
 }
-
