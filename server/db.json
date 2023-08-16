@@ -107,31 +107,17 @@
   "users": [
     {
       "id": 1,
-      "name": "Ela Vu",
-      "username": "elavu",
-      "email": "ela@example.com",
-      "password": "password123"
-    },
-    {
-      "id": 2,
-      "name": "Person Who",
-      "username": "perwho",
-      "email": "perwho@example.com",
-      "password": "password123"
-    },
-    {
-      "id": 3,
-      "name": "test test",
-      "username": "testete",
+      "name": "test test ",
+      "username": "test",
       "email": "test@test.com",
-      "password": "123test"
+      "password": "test123"
     },
     {
-      "id": 4,
-      "name": "flo flo",
-      "username": "flofloflo",
-      "email": "flo@example.com",
-      "password": "flo123"
+      "id": 1,
+      "name": "ela ela ",
+      "username": "elavu",
+      "email": "test@test.com",
+      "password": "password123"
     }
   ]
 }

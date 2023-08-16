@@ -65,16 +65,19 @@
 <script>
 import {ref, onMounted, computed} from 'vue';
 import axios from 'axios';
-import {useRoute} from "vue-router";
+import {useRoute,useRouter} from "vue-router";
 import {useStore} from "vuex";
+import { useQuasar } from 'quasar';
 
 export default {
   setup() {
+    const $q = useQuasar();
     const slide = ref(0);
     const icon = ref(false);
     const productImages = ref([]);
     const selectedProduct = ref({});
     const route = useRoute();
+    const router = useRouter();
     const productId = computed(() => {
       return parseInt(route.params.id);
     });
@@ -105,6 +108,12 @@ export default {
 
     const addToCart = () => {
       store.dispatch('cart/addToCart', {product: selectedProduct.value, quantity: 1});
+      $q.notify({
+        message: 'Product added to cart',
+        color: 'positive',
+        position: 'top',
+        actions: [{ label: 'View Cart', color: 'white', handler: () => router.push('/cart') }]
+      });
     };
 
     return {

@@ -31,7 +31,7 @@ module.exports = configure(function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli/boot-files
     boot: [
-
+      'local-storage'
 
     ],
 
@@ -88,7 +88,24 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
-      // https: true
+      http: true,
+      host: 'localhost',
+      server: {
+        type: 'http'
+      },
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3000',
+          pathRewrite: {
+            '^/api': ''
+          }
+        },
+      },
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+      },
       port: process.env.NODE_ENV === 'production' ? 8000 : 9100,
       open: true // opens browser window automatically
     },

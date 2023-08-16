@@ -23,9 +23,10 @@
           <q-route-tab class="header-tab" to="/category" label="Indoor Plants" router/>
         </q-tabs>
         <q-tabs>
-          <q-route-tab to="/login" router><span class="material-icons header-icons">login</span></q-route-tab>
+          <login-button :loggedIn="loggedIn" />
           <q-route-tab to="/cart" router><span class="material-icons header-icons">shopping_cart</span></q-route-tab>
         </q-tabs>
+
       </q-toolbar>
     </q-header>
 
@@ -40,18 +41,19 @@
           <div class="text-overline">Made by Ela 2023</div>
         </q-toolbar-title>
       </q-toolbar>
+
     </q-footer>
 
   </q-layout>
 </template>
 
 <script>
-import {defineComponent, ref, computed, onMounted, onBeforeMount, onBeforeUnmount} from 'vue'
+import {defineComponent, ref, computed, onMounted, onBeforeMount, onBeforeUnmount, watch} from 'vue'
 import DrawerLinks from '../components/DrawerLinks.vue'
-
+import LoginButton from '../components/LoginButton.vue';
 export default defineComponent({
   name: 'MainLayout',
-  components: {DrawerLinks},
+  components: {DrawerLinks, LoginButton},
   setup() {
     const drawer = ref(false);
     const isMobile = ref(window.innerWidth <= 600);
@@ -66,6 +68,8 @@ export default defineComponent({
       {label: 'Indoor Plants', to: '/category', isRouteTab: true},
 
     ];
+    const loggedIn = computed(() => localStorage.getItem('loggedIn') === 'true');
+
     const updateIsMobile = () => {
       isMobile.value = window.innerWidth <= 600;
     };
@@ -77,11 +81,15 @@ export default defineComponent({
     onBeforeUnmount(() => {
       window.removeEventListener('resize', updateIsMobile);
     });
+    watch(loggedIn, (newValue, oldValue) => {
+      console.log('loggedIn prop changed. New value:', newValue);
+    });
     return {
       drawer,
       toolbarItems,
       isMobile,
-      handleItemClick
+      handleItemClick,
+      loggedIn
     }
   }
 })

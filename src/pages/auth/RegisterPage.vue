@@ -12,8 +12,8 @@
             label="Your Name and Surname"
             lazy-rules
             :rules="[
-              val => val !== null && val !== '' || 'Please type your password',
-              val => val.length >= 6 || 'Password must be at least 6 characters long'
+              val => val !== null && val !== '' || 'Please type your Name and Surname',
+              val => val.length >= 6 || 'Name and Surname must be at least 6 characters long'
             ]"
           />
           <q-input
@@ -23,8 +23,8 @@
             label="Your E-Mail"
             lazy-rules
             :rules="[
-              val => val !== null && val !== '' || 'Please type your password',
-              val => val.length >= 6 || 'Password must be at least 6 characters long'
+              val => val !== null && val !== '' || 'Please type your mail',
+              val => val.length >= 6 || 'Email must be at least 6 characters long'
             ]"
           />
           <q-input
@@ -60,11 +60,11 @@
     </div>
   </div>
 </template>
+
 <script>
-import { defineComponent, ref } from "vue";
-import { useQuasar } from "quasar";
-import { useRouter } from "vue-router";
-import axios from 'axios';
+import { defineComponent, ref } from 'vue';
+import { useQuasar } from 'quasar';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'RegisterPage',
@@ -78,45 +78,56 @@ export default defineComponent({
 
     const onSubmit = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/users');
-        const existingUser = response.data.find(user => user.username === username.value || user.email === email.value);
+        const response = await fetch('http://localhost:3000/users');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const existingUsers = await response.json();
+        const existingUser = existingUsers.find(user => user.username === username.value || user.email === email.value);
 
         if (existingUser) {
           $q.notify({
-            color: "red-5",
-            textColor: "white",
-            icon: "warning",
-            message: "Username or email already exists",
+            color: 'red-5',
+            textColor: 'white',
+            icon: 'warning',
+            message: 'Username or email already exists',
           });
           return;
         }
 
         const newUser = {
-          id: response.data.length + 1,
+          id: existingUsers.length + 1,
           name: name.value,
           username: username.value,
           email: email.value,
           password: password.value,
         };
 
-        await axios.post('http://localhost:3000/users', newUser);
-
-        $q.notify({
-          color: "green-4",
-          textColor: "white",
-          icon: "cloud_done",
-          message: "Registration successful",
+        await fetch('http://localhost:3000/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newUser),
         });
 
-        router.push("/login");
+        $q.notify({
+          color: 'green-4',
+          textColor: 'white',
+          icon: 'cloud_done',
+          message: 'Registration successful',
+        });
+
+        router.push('/login');
       } catch (error) {
-        console.error(error);
+        console.error('Error registering:', error);
 
         $q.notify({
-          color: "red-5",
-          textColor: "white",
-          icon: "warning",
-          message: "An error occurred while registering",
+          color: 'red-5',
+          textColor: 'white',
+          icon: 'warning',
+          message: 'An error occurred while registering',
         });
       }
     };
@@ -131,4 +142,6 @@ export default defineComponent({
   },
 });
 </script>
+
+
 

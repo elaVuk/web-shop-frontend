@@ -43,10 +43,10 @@
   </div>
 </template>
 <script>
-import {useQuasar} from 'quasar';
-import {defineComponent, ref} from "vue";
-import users from "../../../server/db.json";
-import {useRouter} from 'vue-router';
+import { useQuasar } from 'quasar';
+import { defineComponent, ref } from 'vue';
+import { useRouter } from 'vue-router';
+
 export default defineComponent({
   name: 'LoginPage',
 
@@ -56,51 +56,56 @@ export default defineComponent({
     const password = ref(null);
     const router = useRouter();
 
+    const onSubmit = async () => {
+      if (!username.value || !password.value) {
+        $q.notify({
+          color: 'red-5',
+          textColor: 'white',
+          icon: 'warning',
+          message: 'You need to fill all fields',
+        });
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:3000/users');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const users = await response.json();
+        const foundUser = users.find(user => user.username === username.value);
+
+        if (foundUser && foundUser.password === password.value) {
+          $q.notify({
+            color: 'green-4',
+            textColor: 'white',
+            icon: 'cloud_done',
+            message: 'Login successful',
+          });
+          localStorage.setItem('loggedIn', 'true');
+          console.log('User successfully logged in. loggedIn prop:', localStorage.getItem('loggedIn'));
+
+          router.push('/home');
+        } else {
+          $q.notify({
+            color: 'red-5',
+            textColor: 'white',
+            icon: 'warning',
+            message: 'Invalid credentials. Please check your username and password',
+          });
+        }
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
     return {
       username,
       password,
-      onSubmit () {
-        if (!username.value || !password.value) {
-          $q.notify({
-            color: "red-5",
-            textColor: "white",
-            icon: "warning",
-            message: "You need to fill all fields",
-          });
-          return;
-        }
-
-        const user = users.users;
-        const selectedUser = user['username'];
-        const selectedPw= user['password'];
-
-        console.log([name.value])
-        console.log(user)
-        console.log(selectedUser)
-
-        console.log(selectedPw)
-        console.log(password.value)
-
-        if (selectedUser && selectedPw === password.value) {
-          $q.notify({
-            color: "green-4",
-            textColor: "white",
-            icon: "cloud_done",
-            message: "Login successful",
-          });
-          router.push("/home");
-        } else {
-          $q.notify({
-            color: "red-5",
-            textColor: "white",
-            icon: "warning",
-            message: "Invalid credentials. Please check your username and password",
-          });
-        }
-      }
-
-    }
-  }
-})
-
+      onSubmit,
+    };
+  },
+});
 </script>
+
